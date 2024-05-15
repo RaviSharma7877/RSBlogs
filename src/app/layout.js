@@ -58,8 +58,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></Script>
-        <Script id="google-analyties">
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+        <script id="google-analyties">
           {
             `
             window.dataLayer = window.dataLayer || [];
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
             `
           }
-        </Script>
+        </script>
 
       </head>
       <body
