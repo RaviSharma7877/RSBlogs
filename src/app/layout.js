@@ -58,15 +58,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        {/* <!-- Google tag (gtag.js) --> */}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KF7JEBYSF"></script>
-<script>
-  `window.dataLayer = window.dataLayer || [];
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=G-5KF7JEBYSF`}></script>
+        <script id="google-analyties">
+          {
+            `
+            window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-5KF7JEBYSF');`
-</script>
+  gtag('config', 'G-5KF7JEBYSF');
+            `
+          }
+        </script>
 
       </head>
       <body
