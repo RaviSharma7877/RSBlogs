@@ -57,10 +57,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></Script>
-        <Script id="google-analyties">
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+        <script>
           {
             `
             window.dataLayer = window.dataLayer || [];
@@ -70,9 +70,9 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
             `
           }
-        </Script>
+        </script>
 
-      </Head>
+      </head>
       <body
         className={cx(
           inter.variable,
