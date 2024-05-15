@@ -5,6 +5,7 @@ import Header from "@/src/components/Header";
 import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
+import Head from "next/head";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,10 +57,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
-        <script id="google-analyties">
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></Script>
+        <Script id="google-analyties">
           {
             `
             window.dataLayer = window.dataLayer || [];
@@ -69,9 +70,9 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
             `
           }
-        </script>
+        </Script>
 
-      </head>
+      </Head>
       <body
         className={cx(
           inter.variable,
